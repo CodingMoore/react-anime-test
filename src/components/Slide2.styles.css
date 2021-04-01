@@ -3,7 +3,7 @@
   height: 600px;
 }
 
-.el {
+.el2 {
   width: 200px;
   height: 200px;
   margin: 0 auto;
@@ -12,19 +12,3 @@
   background:#F00;
 }
 
-/* .outerHeight {
-  position: relative;
-  height: 150vh;
-  background: #131920;
-  background-image: radial-gradient(farthest-side at 0 0, rgba(255,26,198,0.3), rgba(255,26,198,0)), radial-gradient(farthest-side at 100% 0, rgba(60,221,221,0.4), rgba(60,221,221,0)), radial-gradient(farthest-side at 50% 0, rgba(255,26,198,0.1), rgba(255,26,198,0));
-  overflow: hidden;
-}
-.outerHeight .el {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  margin-top: -25px;
-  margin-left: -25px;
-  border-radius: 6px;
-  background: #0ff;
-} */

@@ -1,31 +1,48 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './Slide2.styles.css';
 import anime from "animejs";
-//import _ from "underscore";
-import _, { map } from 'underscore';
+
 
 
 function Slide2() {
 
-  // function changeIt() {
-  //   console.log("changeIt Reached");
+  // useEffect(() => {
+  //   console.log(animation);
+  //   animation.seek(5000);
+  // });
+
+  
+
+  // useEffect(() => {
   //   anime({
-  //   targets: ".el",
-  //   backgroundColor: "#FFF",
-  //   easing: "easeInOutQuad",
-  //   duration: 2000
+  //     targets: '.el2',
+  //     height: 1000,
+  //     backgroundColor: "#FFF",
+  //     easing: "easeInOutSine",
+  //     //autoplay: false
   //   });
-  // }
+  // })
 
-  // function changeBack() {
-  //   console.log("changeBack Reached");
-  //   anime({
-  //     targets: ".el",
-  //     backgroundColor: "#F00",
-  //     duration: 0
+  // window.onscroll = function(e) {
+  //   animation.seek(window.pageYOffset);
+  //   console.log(window.pageYOffset);
+  // };
+
+  // document.addEventListener("DOMContentLoaded", () => {
+  //   let waypoint = new Waypoint({
+  //     element: document.querySelector(".el2"),
+  //     handler: function() {
+  //       anime({
+  //         targets: '.el2',
+  //         height: 1000,
+  //         backgroundColor: "#FFF",
+  //         easing: "easeInOutSine",
+  //         //autoplay: false
+  //       });
+  //     }
   //   })
-  // }
-
+  // })
+  
   function getScrollPercent() {
     var h = document.documentElement, 
         b = document.body,
@@ -34,25 +51,26 @@ function Slide2() {
     console.log((h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100);
     return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100
   }
-  
-  const tl = anime.timeline({ autoplay: true });
 
-  
-  tl.add({
-    targets: ".el",
+  var animation = anime({
+    targets: '.el2',
+    height: 1000,
     backgroundColor: "#FFF",
-  })
+    easing: "easeInOutSine",
+    //autoplay: false
+  });
 
   window.addEventListener("scroll", () => {
     const percentage = getScrollPercent();
-    tl.seek(tl.duration * (percentage * 0.01));
+    animation.seek(animation.duration * (percentage * 0.01));
+    //console.log(animation);
   });
 
   return (
     <div className="slide2">
       <h1>Slide 2!</h1>
-      <button onClick={getScrollPercent}>Get Percent</button>
-      <div className="el">
+      {/* <button onClick={getScrollPercent}>Get Percent</button> */}
+      <div className="el2">
       </div>
     </div>
   );
