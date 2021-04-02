@@ -6,7 +6,7 @@ function Slide3() {
 
 
   return (
-    <div className="slide3">
+    <div className="slide3"  style={{height: '100vh'}}>
       <h1>Slide 3!</h1>
     </div>
   );
