@@ -2,7 +2,6 @@
 import React, { Fragment, useRef, useEffect, useLayoutEffect, useState } from "react";
 import { Controller, Scene } from 'react-scrollmagic';
 import anime from "animejs";
-import Anime from 'react-anime';
 import Slide1 from "./Slide1";
 import Slide2 from "./Slide2";
 import Slide3 from "./Slide3";
